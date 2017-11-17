@@ -32,7 +32,7 @@ class SetHub extends PluginBase implements CommandExecutor{
         $this->plugin = $plugin;
     }
     
-    public function onCommand(CommandSender $sender, Command $cmd, $label, array $args) {
+    public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args): bool{
     	switch(strtolower($cmd->getName())){
     			case "sethub":
     				if($sender instanceof Player){
